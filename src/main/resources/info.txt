@@ -1,0 +1,76 @@
+Features/Fields in the dataset are (in order as they appear in csv) as follows:
+
+1.  duration: continuous.
+2.  protocol_type: symbolic.
+3.  service: symbolic.
+4.  src_bytes: continuous.
+5.  dst_bytes: continuous.
+6.  land: symbolic.
+7.  wrong_fragment: continuous.
+8.  urgent: continuous.
+9.  hot: continuous.
+10. num_failed_logins: continuous.
+11. logged_in: symbolic.
+12. num_compromised: continuous.
+13. root_shell: continuous.
+14. su_attempted: continuous.
+15. num_root: continuous.
+16. num_file_creations: continuous.
+17. num_shells: continuous.
+18. num_access_files: continuous.
+19. num_outbound_cmds: continuous.
+20. is_host_login: symbolic.
+21. is_guest_login: symbolic.
+22. count: continuous.
+23. srv_count: continuous.
+24. serror_rate: continuous.
+25. srv_serror_rate: continuous.
+26. rerror_rate: continuous.
+27. srv_rerror_rate: continuous.
+28. same_srv_rate: continuous.
+29. diff_srv_rate: continuous.
+30. srv_diff_host_rate: continuous.
+31. dst_host_count: continuous.
+32. dst_host_srv_count: continuous.
+33. dst_host_same_srv_rate: continuous.
+34. dst_host_diff_srv_rate: continuous.
+35. dst_host_same_src_port_rate: continuous.
+36. dst_host_srv_diff_host_rate: continuous.
+37. dst_host_serror_rate: continuous.
+38. dst_host_srv_serror_rate: continuous.
+39. dst_host_rerror_rate: continuous.
+40. dst_host_srv_rerror_rate: continuous.
+41. Flag
+
+Last field for training data is Flag. Flag is set to normal unless it has been
+categorized into one of the 24 attack types featured in the training dataset:
+
+back dos
+buffer_overflow u2r
+ftp_write r2l
+guess_passwd r2l
+imap r2l
+ipsweep probe
+land dos
+loadmodule u2r
+multihop r2l
+neptune dos
+nmap probe
+perl u2r
+phf r2l
+pod dos
+portsweep probe
+rootkit u2r
+satan probe
+smurf dos
+spy r2l
+teardrop dos
+warezclient r2l
+warezmaster r2l
+
+The 24 attack types are categorized into 4 groups:
+1. DOS: denial-of-service, e.g. syn flood;
+2. R2L: unauthorized access from a remote machine, e.g. guessing password;
+3. U2R: unauthorized access to local superuser (root) privileges, 
+        e.g., various ``buffer overflow'' attacks;
+4. probing: surveillance and other probing, e.g., port scanning.
